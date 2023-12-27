@@ -262,27 +262,28 @@ class PasswordManager extends Component {
                 Show Passwords
               </label>
             </div>
-            <div className="display-password-list-container">
-              {passwordDetailCount === 0 ? (
-                <div className="no-password-container">
-                  <img
-                    src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
-                    alt="no passwords"
-                    className="no-password-illustration-image"
-                  />
-                  <p className="no-password-text">No Passwords</p>
-                </div>
-              ) : (
-                searchResult.map(eachDetails => (
+
+            {searchResult.length === 0 ? (
+              <div className="no-password-container">
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/no-passwords-img.png"
+                  alt="no passwords"
+                  className="no-password-illustration-image"
+                />
+                <p className="no-password-text">No Passwords</p>
+              </div>
+            ) : (
+              <ul className="display-password-list-container">
+                {searchResult.map(eachDetails => (
                   <PasswordItem
                     key={eachDetails.id}
                     passwordDetails={eachDetails}
                     deletePasswordDetails={this.deletePasswordDetails}
                     isPasswordDisplay={isPasswordDisplay}
                   />
-                ))
-              )}
-            </div>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>

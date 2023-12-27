@@ -12,7 +12,7 @@ class PasswordItem extends Component {
     const {logoIcon, website, username, password} = passwordDetails
 
     return (
-      <div className="user-password-items-main-container">
+      <li className="user-password-items-main-container">
         <div className="user-password-items-container">
           <div className="user-main-details">
             <h1 className="logo-icon">{logoIcon}</h1>
@@ -43,7 +43,7 @@ class PasswordItem extends Component {
             />
           </button>
         </div>
-      </div>
+      </li>
     )
   }
 }

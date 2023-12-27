@@ -2,6 +2,7 @@
   width: 100%;
   padding: 10px;
   max-width: 500px;
+  list-style: none;
 }
 .user-password-items-container {
   display: flex;
